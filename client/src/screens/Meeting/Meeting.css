@@ -1,0 +1,212 @@
+/* Meeting page css */
+
+.meet-screen {
+  overflow-y: auto;
+  width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 1 !important;
+}
+
+.slick-next {
+  right: 0.5% !important;
+}
+
+.slick-prev {
+  left: 0.5% !important;
+}
+
+.video-grid {
+  display: grid !important;
+  background-color: #1b1919;
+  width: auto;
+  min-height: 100vh;
+  padding-bottom: 45px;
+}
+
+.video-grid .video {
+  position: relative;
+  margin: auto;
+  width: 90%;
+  height: 86vh;
+  margin: 20px auto;
+}
+
+.video-grid video {
+  height: 100%;
+  border-radius: 10px;
+  width: 100%;
+  object-fit: cover;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg); /* Safari and Chrome */
+  -moz-transform: rotateY(180deg); /* Firefox */
+}
+
+.video-controls {
+  width: 100%;
+  background-color: transparent;
+  position: absolute;
+  bottom: 0;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-controls button {
+  margin: 0 10px;
+}
+
+.video-controls button i {
+  text-align: center;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.sidebar {
+  padding: 10px !important;
+  height: 100vh;
+  animation: slide 0.2s forwards;
+  overflow-y: auto;
+}
+
+.user {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 100%;
+  color: white;
+}
+
+.user img {
+  width: 10% !important;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.user h6 {
+  background-color: #1b1919;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#message {
+  overflow-x: hidden;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 0 5px;
+}
+
+.send {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.send .input-field {
+  margin: 0 10px;
+  padding: 0;
+  width: 100%;
+}
+
+.send button {
+  padding: 0 !important;
+}
+
+.chats {
+  display: flex;
+  flex-direction: column;
+  height: 77vh;
+  overflow-y: auto;
+  width: 100%;
+  margin-bottom: 15px;
+  scroll-behavior: unset;
+}
+
+.message {
+  width: fit-content;
+  border-radius: 10px;
+  padding: 5px 12px;
+  margin: 10px;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.message::selection {
+  background-color: teal !important;
+  color: white !important;
+}
+
+.leftmsg {
+  background-color: lightgray;
+  border-bottom-left-radius: 0px;
+}
+.rightmsg {
+  border-bottom-right-radius: 0px;
+  align-self: flex-end;
+  background-color: rgb(8, 93, 252);
+  color: white;
+}
+
+#info .row {
+  margin-bottom: 0 !important;
+}
+
+#info {
+  word-wrap: break-word;
+}
+
+#info .logo h5 {
+  padding-top: 20px;
+  color: black;
+}
+
+@media screen and (max-width: 992px) {
+  .meet-screen {
+    background-color: white;
+  }
+  .video-grid .video {
+    margin: auto;
+    height: 40vh;
+  }
+  .video-grid {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .video-controls button {
+    margin: 0 5px !important;
+  }
+  .user {
+    left: 0;
+  }
+  .user img {
+    width: 13% !important;
+    margin: 10px;
+  }
+  .user h6 {
+    text-align: center;
+  }
+  .slick-prev,
+  .slick-next {
+    top: 47% !important;
+  }
+  #info .logo h5 {
+    font-size: 18px;
+    padding-top: 10px;
+  }
+}
